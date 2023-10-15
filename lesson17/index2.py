@@ -1,4 +1,4 @@
-import dataSource1
+import datasource
 import tkinter as tk
 from tkinter import ttk
 
@@ -15,7 +15,7 @@ class Window(tk.Tk):
         topFrame.pack()
 
         bottomFrame = tk.Frame(self, background='#B9887D')
-        choices = dataSource.cityNames()
+        choices = datasource.cityNames()
         choicesvar = tk.StringVar(value=choices)
         self.listbox = tk.Listbox(
             bottomFrame, listvariable=choicesvar, width=12)
@@ -54,7 +54,7 @@ class Window(tk.Tk):
     def user_selected(self, event):
         selectedIndex = self.listbox.curselection()[0]
         cityName = self.listbox.get(selectedIndex)
-        datalist = dataSource.info(cityName)
+        datalist = datasource.info(cityName)
         self.yearVar.set(datalist[0])
         self.cityVar.set(datalist[1])
         self.population.set(datalist[2])
@@ -63,7 +63,7 @@ class Window(tk.Tk):
 
 
 def main():
-    window = Window()
+    window=Window()
     window.mainloop()
 
 

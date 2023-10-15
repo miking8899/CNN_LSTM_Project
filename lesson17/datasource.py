@@ -46,3 +46,7 @@ def cityNames() -> list[str]:
         cityName = row[1]
         names.append(cityName)
     return names
+
+
+if __name__=="__main__":
+    __download()

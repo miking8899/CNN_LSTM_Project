@@ -23,7 +23,7 @@ class Window(tk.Tk):
 
 
 def main():
-    window = Window()
+    window=Window()
     # window.title("米樂金第一個TKINTER window App")
     window.mainloop()
 
