@@ -11,6 +11,7 @@ class Window(tk.Tk):
 
 def main():
     window=Window()
+    window.title="台北市 YOUBIKE"
     
     pass
 
